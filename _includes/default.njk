@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{title or metadata.title}}</title>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content="{{description or metadata.description}}" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+
+  <link rel="stylesheet" href="/style.css?v={% version %}" />
+
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  {% include "nav.njk" %}
+  {% block content %}
+  {{ content | safe }}
+  {% endblock %}
+</body>
+
+<script defer src="/js/alpine.js?v={% version %}"></script>
+
+</html>

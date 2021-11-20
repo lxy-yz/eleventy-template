@@ -1,0 +1,16 @@
+---
+layout: holygrail
+title: It works
+---
+
+{% block content %}
+<div x-data="{ value: 0 }">
+  <button @click="value++" class="px-2 rounded border border-green-500">
+    increment
+  </button>
+  <span x-text="value" class=""></span>
+  <button @click="value--" class="px-2 rounded border border-green-500">
+    decrement
+  </button>
+</div>
+{% endblock %}

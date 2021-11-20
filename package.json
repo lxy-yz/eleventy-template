@@ -1,0 +1,25 @@
+{
+  "name": "my-eleventy-template",
+  "version": "1.0.0",
+  "description": "My eleventy template",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "start": "eleventy --serve & npm run tailwindcss:watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy & npm run tailwindcss:build",
+    "tailwindcss:watch": "tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch",
+    "tailwidncss:build": "NODE_ENV=production tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-dev.com:lxy-yz/eleventy-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "alpinejs": "^3.4.2",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}
