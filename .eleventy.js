@@ -7,6 +7,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./images")
   eleventyConfig.addPassthroughCopy({
+    "./node_modules/@fortawesome/fontawesome-free/webfonts": "./webfonts",
+  })
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/@fortawesome/fontawesome-free/css/all.min.css":
+      "./css/fontawesome.css",
+  })
+  eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js",
   })
 

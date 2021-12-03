@@ -1,7 +1,9 @@
+const colors = require("tailwindcss/colors")
+
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   purge: {
-    content: ['_site/**/*.html'],
+    content: ["_site/**/*.html"],
     options: {
       safelist: [],
     },
@@ -9,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        change: 'cyan',
+        primary: colors.indigo,
+        secondary: colors.amber,
+        accent: colors.pink,
       },
     },
   },

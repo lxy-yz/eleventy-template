@@ -20,6 +20,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "alpinejs": "^3.4.2",
-    "tailwindcss-cli": "^0.1.2"
+    "tailwindcss-cli": "^0.1.2",
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
