@@ -1,3 +1,3 @@
-# blog
+# [Blog]()
 
-My blog
+![preview](./screenshot.png)
