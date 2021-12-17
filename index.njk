@@ -1,16 +1,56 @@
 ---
-layout: holygrail
+layout: default
 title: It works
 ---
 
 {% block content %}
-<div x-data="{ value: 0 }">
-  <button @click="value++" class="px-2 rounded border border-green-500">
+<div x-data="counter" class="bg-gray-50 px-12 py-8 border-b-2 border-gray-300">
+  <button @click="increment"
+    class="px-4 py-2 rounded text-gray-500 bg-gray-200 hover:bg-gray-300 border border-gray-300">
     increment
   </button>
-  <span x-text="value" class=""></span>
-  <button @click="value--" class="px-2 rounded border border-green-500">
+  <span x-effect="zoomEffect" x-bind:class="zoom ? 'scale-125' : 'scale-1'" x-text="value"
+    class="transition ease-in-out inline-block mx-4 text-2xl text-gray-600 font-semibold"></span>
+  <button @click="decrement"
+    class="px-4 py-2 rounded text-gray-500 bg-gray-200 hover:bg-gray-300 border border-gray-300">
     decrement
   </button>
+
+  <hr class="my-4">
+
+  <button @click="toggle" class="px-6 py-2 rounded bg-gray-200 hover:bg-gray-300 border border-gray-300">
+    <span x-text="open ? 'Close' : 'Open'"></span>
+  </button>
+  <div x-show="open" x-transition class="h-20 bg-gray-500 text-gray-200 text-2xl flex justify-center items-center">
+    Toggled
+  </div>
 </div>
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('counter', () => ({
+      value: 0,
+      zoom: false,
+      open: false,
+      increment() {
+        this.value++;
+        this.zoom = true;
+      },
+      decrement() {
+        this.value--;
+        this.zoom = true;
+      },
+      zoomEffect() {
+        console.log(this.zoom)
+        const self = this;
+        setTimeout(() => {
+          self.zoom = false;
+        }, 300);
+      },
+      toggle() {
+        this.open = !this.open
+      },
+    }))
+  });
+</script>
 {% endblock %}

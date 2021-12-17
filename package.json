@@ -19,8 +19,9 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@ky-is/tailwind-color-palette": "^1.0.0",
     "alpinejs": "^3.4.2",
-    "tailwindcss-cli": "^0.1.2",
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "tailwindcss-cli": "^0.1.2"
   }
 }

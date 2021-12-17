@@ -10,10 +10,18 @@ module.exports = {
   },
   theme: {
     extend: {
+      // https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L13-L41
       colors: {
+        // greys
+        gray: colors.blueGray,
+        // primary
         primary: colors.indigo,
-        secondary: colors.amber,
-        accent: colors.pink,
+        // accent
+        // https://adevade.github.io/color-scheme-generator/
+        ...require("@ky-is/tailwind-color-palette")("tomato", {
+          grayscale: false,
+          ui: true,
+        }),
       },
     },
   },
