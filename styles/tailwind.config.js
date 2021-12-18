@@ -1,13 +1,12 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  mode: "jit",
-  purge: {
-    content: ["_site/**/*.html"],
-    options: {
-      safelist: [],
-    },
-  },
+  content: ["_site/**/*.html"],
+
+  // Safelisting is a last-resort, and should only be used in situations where it’s impossible to scan certain content for class names.
+  // https://tailwindcss.com/docs/content-configuration#safelisting-classes
+  safelist: [],
+
   theme: {
     extend: {
       // https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L13-L41
