@@ -21,6 +21,16 @@ module.exports = {
           grayscale: false,
           ui: true,
         }),
+
+        boxShadow: {
+          "r-lg":
+            "10px 0 15px -3px rgb(0 0 0 / 0.1), 4px 0 6px -4px rgb(0 0 0 / 0.1);",
+        },
+
+        fontFamily: {
+          // https://fonts.google.com/specimen/Josefin+Sans?category=Sans+Serif&sort=popularity&stylecount=10
+          display: ["Josefin Sans", "Helvetica", "sans-serif"],
+        },
       },
     },
   },
