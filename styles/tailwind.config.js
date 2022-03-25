@@ -12,7 +12,7 @@ module.exports = {
       // https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L13-L41
       colors: {
         // greys
-        gray: colors.blueGray,
+        gray: colors.slate,
         // primary
         primary: colors.indigo,
         // accent

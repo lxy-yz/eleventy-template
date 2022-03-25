@@ -22,9 +22,7 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@ky-is/tailwind-color-palette": "^1.0.0",
     "alpinejs": "^3.9.3",
+    "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
-  },
-  "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^1.0.1"
   }
 }

@@ -1,10 +1,7 @@
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help")
 const fs = require("fs")
 const now = String(Date.now())
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(UpgradeHelper)
-
   eleventyConfig.addWatchTarget("./styles/tailwind.config.js")
   eleventyConfig.addWatchTarget("./styles/tailwind.css")
 
