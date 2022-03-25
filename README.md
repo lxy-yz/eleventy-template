@@ -1,3 +1,19 @@
-# [Blog]()
+# eleventy-template
 
-![preview](./screenshot.png)
+Install
+
+```
+npm i
+```
+
+Development
+
+```
+npm start
+```
+
+Deploy
+
+```
+netlify deploy
+```
